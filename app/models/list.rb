@@ -10,15 +10,15 @@ class List < ActiveRecord::Base
   HOURS_S = 'three hours prior sms'
   
   def self.add person, lists
-    if lists[:sms]
-      Listing.create :person => person, :list => List.find_by_name(WEEK_S) if lists[:week]
-      Listing.create :person => person, :list => List.find_by_name(DAYS_S) if lists[:days]
-      Listing.create :person => person, :list => List.find_by_name(HOURS_S) if lists[:hours]
+    if lists[:sms] == '1'
+      Listing.create :person => person, :list => List.find_by_name(WEEK_S) if lists[:week] == '1'
+      Listing.create :person => person, :list => List.find_by_name(DAYS_S) if lists[:days] == '1'
+      Listing.create :person => person, :list => List.find_by_name(HOURS_S) if lists[:hours] == '1'
     end
-    if lists[:email]
-      Listing.create :person => person, :list => List.find_by_name(WEEK_E) if lists[:week]
-      Listing.create :person => person, :list => List.find_by_name(DAYS_E) if lists[:days]
-      Listing.create :person => person, :list => List.find_by_name(HOURS_E) if lists[:hours]      
+    if lists[:email] == '1'
+      Listing.create :person => person, :list => List.find_by_name(WEEK_E) if lists[:week] == '1'
+      Listing.create :person => person, :list => List.find_by_name(DAYS_E) if lists[:days] == '1'
+      Listing.create :person => person, :list => List.find_by_name(HOURS_E) if lists[:hours] == '1'
     end
   end
 

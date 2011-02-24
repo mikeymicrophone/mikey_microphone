@@ -1,9 +1,14 @@
 MikeyMicrophone::Application.routes.draw do
-  resources :listings
+  resources :listings do
+    get 'homepage', :on => :collection
+    post 'sign_up', :on => :collection
+  end
 
   resources :people
 
   resources :lists
+  
+  root :to => 'listings#homepage'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

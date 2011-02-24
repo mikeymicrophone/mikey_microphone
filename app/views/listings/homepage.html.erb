@@ -1,0 +1,31 @@
+Mailing List
+<div id='update_spot' style="display:none;">Thanks - I will be in touch before the next show!</div>
+<%= form_tag sign_up_listings_path, :id => 'mailing_list_form', :remote => true, :onsubmit => "$('mailing_list_form').reset();$('update_spot').show();" do %>
+  <div id='person_details'>
+	  <%= fields_for :person do |p| %>
+		  <%= p.text_field :first_name %>
+		  <%= p.label :first_name %>
+			<%= p.text_field :last_name %>
+			<%= p.label :last_name %><br><br>
+			<%= p.text_field :email %>
+			<%= p.label :email %>
+			<%= p.text_field :phone %>
+			<%= p.label :phone %><br>
+		<% end %>
+	</div>
+	<div id='notification_details'>
+		<%= fields_for :lists do |l| %>
+		  how much warning do you want before the show?<br>
+			<%= l.check_box :week, :checked => true %><%= l.label :week, 'one week' %>
+			<%= l.check_box :days, :checked => true %><%= l.label :days, 'two days' %>
+			<%= l.check_box :hours %><%= l.label :hours, 'three hours' %><br>
+			how do you want to be notified?<br>
+			<%= l.check_box :email, :checked => true %><%= l.label :email, 'by email' %>
+			<%= l.check_box :sms %><%= l.label :sms, 'by text' %>
+		<% end %>
+	</div>
+	<div id="sign_up_button">
+  	<%= submit_tag 'sign me up' %>
+  </div>
+<% end %>
+<%= image_tag "mikey_at_freddys.png", :id => 'mike_at_freddys' %>

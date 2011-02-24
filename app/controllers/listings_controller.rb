@@ -1,9 +1,15 @@
 class ListingsController < ApplicationController
   
+  def homepage
+    
+  end
+  
   def sign_up
     @person = Person.create params[:person]
     List.add @person, params[:lists]
+    render :text => "Thanks - I will be in touch before the next show!"
   end
+  
   # GET /listings
   # GET /listings.xml
   def index

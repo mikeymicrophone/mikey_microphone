@@ -1,0 +1,5 @@
+#person_details, #notification_details, #sign_up_button {
+	float: left;
+	padding-left: 70px;
+	z-index: 3;
+}
