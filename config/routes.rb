@@ -1,4 +1,6 @@
 MikeyMicrophone::Application.routes.draw do
+  resources :apps
+
   resources :listings do
     get 'homepage', :on => :collection
     post 'sign_up', :on => :collection
