@@ -1,5 +1,30 @@
+#homepage_background {
+	background-image: url('/images/profile.jpg');
+	background-opacity: 10%;
+}
+
+h2 {
+	color: #1D713A;
+}
+
 #person_details, #notification_details, #sign_up_button {
 	float: left;
-	padding-left: 70px;
+	padding-left: 30px;
 	z-index: 3;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+#freddys_show {
+	text-align: center;
 }

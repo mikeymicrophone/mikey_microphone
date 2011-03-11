@@ -1,0 +1,21 @@
+#apps_list {
+	margin: 20px;
+	font-size: 1.3em;
+}
+
+.app {
+	border: 1px black solid;
+	-webkit-border-radius: 8px;
+	padding: 11px;
+	padding-top: 1px;
+}
+
+.app .description {
+	margin: 18px;
+}
+
+.app a {
+	font-size: 2em;
+	color: #328C45;
+	margin-left: 50px;
+}
