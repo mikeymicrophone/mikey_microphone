@@ -21,11 +21,13 @@
 	padding-top: 1px;
 	margin: 8px;
 	background-color: white;
-	opacity: 0.8;
+	opacity: 0.7;
+	filter:alpha(opacity=80);
 }
 
 .app .contents {
 	opacity: 1;
+	filter:alpha(opacity=100);
 	background: transparent;
 }
 

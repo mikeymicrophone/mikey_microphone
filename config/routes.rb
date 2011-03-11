@@ -1,4 +1,6 @@
 MikeyMicrophone::Application.routes.draw do
+  resources :photos
+
   resources :links
 
   resources :details

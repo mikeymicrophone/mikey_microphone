@@ -3,6 +3,14 @@
 	background-opacity: 10%;
 }
 
+#top_links a {
+	color: white;
+	text-decoration: none;
+	font-size: 1.2em;
+	margin: 3px;
+	padding: 3px;
+}
+
 h2 {
 	color: #1D713A;
 }
