@@ -1,3 +1,13 @@
+#app_background {
+	background-image: url(/images/jump_kick.jpg);
+}
+
+#app_intro {
+	font-family: "Helvetica";
+	padding: 20px;
+	font-size: 1.4em;
+}
+
 #apps_list {
 	margin: 20px;
 	font-size: 1.3em;
@@ -6,16 +16,43 @@
 .app {
 	border: 1px black solid;
 	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
 	padding: 11px;
 	padding-top: 1px;
+	margin: 8px;
+	background-color: white;
+	opacity: 0.8;
+}
+
+.app .contents {
+	opacity: 1;
+	background: transparent;
+}
+
+.app .title {
+	font-size: 2em;
+	color: #1D713A;
+	float: left;
+	padding: 6px;
 }
 
 .app .description {
+	float: left;
+	color: black;
+	padding: 5px;
+	font-size: 1.4em;
+}
+
+.app .details {
 	margin: 18px;
 }
 
+.detail {
+	margin-top: 9px;
+}
+
 .app a {
-	font-size: 2em;
+	font-size: 1.32em;
 	color: #328C45;
 	margin-left: 50px;
 }

@@ -1,11 +1,26 @@
-<div id="apps_list">
-	<% @apps.each do |app| %>
-	  <%= div_for app do %>
-			<h3><%= app.name %></h3>
-		  <%= content_tag :div, :class => 'description' do %>
-    		<%= textilize(app.description).html_safe %>
-		  <% end %>
-		  <%= link_to app.url, app.url %>
+<div id="app_background">
+	<div id="app_intro">
+	  Mikey's apps are written for iPhone, iPad, and iPod, and backed by Rails apps on the web.  They use CoreData to give you full power to control your data while you are offline; but they also enable you to connect with advice and information from around the globe.
+	</div>
+	<div id="apps_list">
+		<% @apps.each do |app| %>
+		  <%= div_for app do %>
+		    <div class='contents'>
+					<div class='title'><%= app.name %></div>
+				  <%= content_tag :div, :class => 'description' do %>
+		    		<%= app.description %>
+				  <% end %>
+				  <div class='clearfix'></div>
+				  <%= content_tag :div, :class => 'details' do %>
+				    <% app.details.each do |d| %>
+							<%= div_for d do %>
+		  		      <%= d.description %>
+						  <% end %>
+				    <% end %>
+				  <% end %>
+				  <%= link_to app.url, app.url %>
+				</div>
+			<% end %>
 		<% end %>
-	<% end %>
+	</div>
 </div>

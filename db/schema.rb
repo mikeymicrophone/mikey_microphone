@@ -10,12 +10,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110309104107) do
+ActiveRecord::Schema.define(:version => 20110311054228) do
 
   create_table "apps", :force => true do |t|
     t.string   "name"
     t.text     "description"
     t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "details", :force => true do |t|
+    t.string   "described_type"
+    t.integer  "described_id"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "links", :force => true do |t|
+    t.string   "linked_type"
+    t.integer  "linked_id"
+    t.text     "location"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

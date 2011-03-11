@@ -15,6 +15,8 @@
   <%= @app.url %>
 </p>
 
+<%= link_to 'add detail', new_detail_path(:detail => {:described_type => 'App', :described_id => @app.id}) %>
+<%= link_to 'new link', new_link_path(:link => {:linked_type => 'App', :linked_id => @app.id}) %>
 
 <%= link_to 'Edit', edit_app_path(@app) %> |
 <%= link_to 'Back', apps_path %>

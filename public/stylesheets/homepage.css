@@ -7,6 +7,16 @@ h2 {
 	color: #1D713A;
 }
 
+#join_mailing_list {
+	text-decoration: underline;
+	color: white;
+	padding: 5px;
+}
+
+#mailing_list {
+	color: white;
+}
+
 #person_details, #notification_details, #sign_up_button {
 	float: left;
 	padding-left: 30px;
@@ -25,6 +35,11 @@ h2 {
 	float: left;
 }
 
-#freddys_show {
+#freddys_show, #new_songs {
 	text-align: center;
+	color: white;
+}
+
+#new_songs a {
+	color: white;
 }

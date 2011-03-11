@@ -7,20 +7,20 @@
 		<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FMikey-Microphone%2F197480440273827&amp;width=292&amp;colorscheme=light&amp;show_faces=false&amp;stream=false&amp;header=true&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:62px;" allowTransparency="true"></iframe>
 	</div>
 	<div class='clearfix'></div>
-	<a onclick="$('mailing_list').show();">join mailing list</a>
+	<a onclick="$('mailing_list').toggle();" class='right' id='join_mailing_list'>join mailing list</a>
 	<div id='mailing_list' style='display:none;'>
 		<div id='update_spot' style="display:none;">Thanks - I will be in touch before the next show!</div>
 		<%= form_tag sign_up_listings_path, :id => 'mailing_list_form', :remote => true, :onsubmit => "$('update_spot').show();" do %>
 		  <div id='person_details'>
 			  <%= fields_for :person do |p| %>
 				  <%= p.text_field :first_name %>
-				  <%= p.label :first_name %>
+				  <%= p.label :first_name, 'first' %>
 					<%= p.text_field :last_name %>
-					<%= p.label :last_name %><br><br>
+					<%= p.label :last_name, 'last' %><br><br>
 					<%= p.text_field :email %>
-					<%= p.label :email %>
+					<%= p.label :email, 'email' %>
 					<%= p.text_field :phone %>
-					<%= p.label :phone %><br>
+					<%= p.label :phone, 'phone' %><br>
 				<% end %>
 			</div>
 			<div id='notification_details'>
@@ -44,9 +44,9 @@
 		<h2>Songs from my last recording session</h2>
 		<!-- Soundcloud songs -->
 		<object height="81" width="100%"> <param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F11673798&amp;show_comments=true&amp;auto_play=false&amp;color=3e974b"></param> <param name="allowscriptaccess" value="always"></param> <embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F11673798&amp;show_comments=true&amp;auto_play=false&amp;color=3e974b" type="application/x-shockwave-flash" width="100%"></embed> </object>   <span><a href="http://soundcloud.com/mikeymicrophone/heartbreak-heart-attack">Heartbreak Heart Attack</a> by <a href="http://soundcloud.com/mikeymicrophone">Mikey Microphone</a></span>
-	</div>
 
-	<object height="81" width="100%"> <param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F11673658&amp;show_comments=true&amp;auto_play=false&amp;color=3e974b"></param> <param name="allowscriptaccess" value="always"></param> <embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F11673658&amp;show_comments=true&amp;auto_play=false&amp;color=3e974b" type="application/x-shockwave-flash" width="100%"></embed> </object>   <span><a href="http://soundcloud.com/mikeymicrophone/untitled">Untitled</a> by <a href="http://soundcloud.com/mikeymicrophone">Mikey Microphone</a></span>
+	  <object height="81" width="100%"> <param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F11673658&amp;show_comments=true&amp;auto_play=false&amp;color=3e974b"></param> <param name="allowscriptaccess" value="always"></param> <embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F11673658&amp;show_comments=true&amp;auto_play=false&amp;color=3e974b" type="application/x-shockwave-flash" width="100%"></embed> </object>   <span><a href="http://soundcloud.com/mikeymicrophone/untitled">Untitled</a> by <a href="http://soundcloud.com/mikeymicrophone">Mikey Microphone</a></span>
+  </div>
 
 	<div class='clearfix' id='freddys_show'>
 		<h2>Videos from my last show</h2>
