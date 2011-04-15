@@ -1,0 +1,3 @@
+[submodule "vendor/gems/acts_as_list"]
+	path = vendor/gems/acts_as_list
+	url = git://github.com/swanandp/acts_as_list.git
