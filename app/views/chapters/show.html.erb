@@ -8,8 +8,8 @@
 	<%= content_tag_for :h3, @chapter, :title do %>
 	  <%= @chapter.name %>
 	<% end %>
-
-  <%= div_for @chapter, :navigation, :class => 'clearfix' do %>
+	
+  <%= div_for @chapter, :navigation do %>
 		<%= link_to "<< #{@chapter.higher_item.name}", @chapter.higher_item, :class => 'previous_chapter' if @chapter.higher_item %>
 		<%= link_to "#{@chapter.lower_item.name} >>", @chapter.lower_item, :class => 'next_chapter' if @chapter.lower_item %>
 	<% end %>
@@ -17,7 +17,7 @@
 	<%= div_for @chapter, :focus do %>
 		<%= raw RedCloth.new(@chapter.content).to_html %>
 	<% end %>
-  <%= div_for @chapter, :navigation, :class => 'clearfix' do %>
+  <%= div_for @chapter, :navigation_bottom, :class => 'clearfix' do %>
 		<%= link_to "<< #{@chapter.higher_item.name}", @chapter.higher_item, :class => 'previous_chapter' if @chapter.higher_item %>
 		<%= link_to "#{@chapter.lower_item.name} >>", @chapter.lower_item, :class => 'next_chapter' if @chapter.lower_item %>
 	<% end %>

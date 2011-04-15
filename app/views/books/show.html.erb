@@ -5,7 +5,7 @@
 		<%= @book.name %>
 	<% end %>
 	<%= content_tag_for :h3, @book, :comment_on do %>
-	  <%= link_to_function 'comment', "$('comment_text').focus()" %>
+	  <em><%= link_to_function '-- comment! --', "$('comment_text').focus()" %></em>
 	<% end %>
 
 	<% @book.chapters.each do |chapter| %>
@@ -14,8 +14,8 @@
 		  <% div_for chapter, :content do %>
 		    <%= raw RedCloth.new(chapter.content).to_html %>
 		  <% end %>
-		  <%= div_for chapter, :comment_on do %>
-			  <%= link_to 'comment', chapter_path(chapter) + '#new_comment' %>
+		  <%= content_tag_for :h3, chapter, :comment_on do %>
+			  <em><%= link_to '-- comment! --', chapter_path(chapter) + '#new_comment' %></em>
 			<% end %>
 		<% end %>
 	<% end %>

@@ -1,5 +1,7 @@
 #book_background {
 	background-image: url(/images/clipboard.jpg);
+	opacity: 0.92;
+	filter:alpha(opacity=92);
 }
 
 .title_book, .title_chapter, .comment_on_book, .comment_on_chapter {
@@ -12,10 +14,14 @@
 }
 
 .navigation_chapter {
+	margin-top: -40px;
+}
+
+.navigation_bottom_chapter, .navigation_chapter {
 	height: 31px;
 }
 
-.navigation_chapter a {
+.navigation_chapter a, .navigation_bottom_chapter a {
 	border: 1px black solid;
 	font-size: 1.3em;
 	-webkit-border-radius: 8px;
