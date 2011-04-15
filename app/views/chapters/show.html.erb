@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+<h2>
+  <%= link_to @chapter.book.name, @chapter.book %>
+</h2>
+
+<h3>
+  <%= @chapter.name %>
+</h3>
+
+<%= raw textilize(@chapter.content) %>
+
+
+<%= link_to 'Edit', edit_chapter_path(@chapter) %> |
+<%= link_to 'Back', chapters_path %>

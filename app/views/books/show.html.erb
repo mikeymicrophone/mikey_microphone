@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+<h1><%= @book.name %></h1>
+
+<% @book.chapters.each do |chapter| %>
+  <% div_for chapter do %>
+	  <h2><%= link_to chapter.name, chapter %></h2>
+	  <% div_for chapter, :content do %>
+	    <%= raw textilize(chapter.content) %>
+	  <% end %>
+	<% end %>
+<% end %>
+
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>
