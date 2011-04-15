@@ -1,4 +1,8 @@
 module ApplicationHelper
+  
+  def link_to_name obj
+    link_to obj.name, obj rescue nil
+  end
 
   def google_analytics
     %Q!<script type="text/javascript">

@@ -7,8 +7,10 @@
   <%= @chapter.name %>
 </h3>
 
+<%= link_to "<< #{@chapter.higher_item.name}", @chapter.higher_item if @chapter.higher_item %>
+<%= link_to "#{@chapter.lower_item.name} >>", @chapter.lower_item if @chapter.lower_item %>
+
 <%= raw RedCloth.new(@chapter.content).to_html %>
 
-
-<%= link_to 'Edit', edit_chapter_path(@chapter) %> |
-<%= link_to 'Back', chapters_path %>
+<%= link_to "<< #{@chapter.higher_item.name}", @chapter.higher_item if @chapter.higher_item %>
+<%= link_to "#{@chapter.lower_item.name} >>", @chapter.lower_item if @chapter.lower_item %>
