@@ -1,3 +1,4 @@
+require 'redcloth'
 class BooksController < ApplicationController
   # GET /books
   # GET /books.xml
