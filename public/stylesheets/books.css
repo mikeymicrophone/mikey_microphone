@@ -44,7 +44,7 @@
 	background: transparent;
 }
 
-.chapter, .focus_chapter p {
+.chapter, .focus_chapter p, #new_comment, .comment {
 	border: 1px black solid;
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;

@@ -1,4 +1,4 @@
-require 'redcloth'
+require 'redcloth' # seems to be needed on Dreamhost
 class BooksController < ApplicationController
   # GET /books
   # GET /books.xml

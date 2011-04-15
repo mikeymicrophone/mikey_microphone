@@ -13,4 +13,16 @@
 		  <% end %>
 		<% end %>
 	<% end %>
+	<%= form_for @book.comments.new do |f| %>
+	  <%= content_tag_for(:h2, @book, :comment) { "Please share your comments." } %>
+	  <%= f.text_area :text, :size => '45x3' %><br>
+	  <%= f.text_field :name %><%= f.label :name, 'name' %><br>
+	  <%= f.text_field :email %><%= f.label :email, 'email (will not be published)'%><br>
+	  <%= f.text_field :url %><%= f.label :url, 'your web site' %><br>
+	  <%= f.submit "Submit for moderation" %>
+	  <%= f.hidden_field :commendable_type, :value => 'Book' %>
+	  <%= f.hidden_field :commendable_id, :value => @book.id %>
+	<% end %>
+	
+	<%= render :partial => @book.comments.public %>
 </div>

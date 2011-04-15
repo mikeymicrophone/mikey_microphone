@@ -1,4 +1,6 @@
 MikeyMicrophone::Application.routes.draw do
+  resources :comments
+
   resources :chapters
 
   resources :books

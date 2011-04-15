@@ -1,0 +1,10 @@
+<%= div_for comment do %>
+  <% if comment.name.present? %>
+    <% if comment.url.present? %>
+      <%= link_to comment.name, comment.url %>
+		<% else %>
+		  <%= comment.name %>
+    <% end %>
+  <% end %>
+	<%= comment.text %>
+<% end %>

@@ -21,4 +21,16 @@
 		<%= link_to "<< #{@chapter.higher_item.name}", @chapter.higher_item, :class => 'previous_chapter' if @chapter.higher_item %>
 		<%= link_to "#{@chapter.lower_item.name} >>", @chapter.lower_item, :class => 'next_chapter' if @chapter.lower_item %>
 	<% end %>
+	<%= form_for @chapter.comments.new do |f| %>
+	  <%= content_tag_for(:h2, @chapter, :comment) { "Please share your comments." } %>
+	  <%= f.text_area :text, :size => '45x3' %><br>
+	  <%= f.text_field :name %><%= f.label :name, 'name' %><br>
+	  <%= f.text_field :email %><%= f.label :email, 'email (will not be published)'%><br>
+	  <%= f.text_field :url %><%= f.label :url, 'your web site' %><br>
+	  <%= f.submit "Submit for moderation" %>
+	  <%= f.hidden_field :commendable_type, :value => 'Chapter' %>
+	  <%= f.hidden_field :commendable_id, :value => @chapter.id %>
+	<% end %>
+	
+	<%= render :partial => @chapter.comments.public %>
 </div>

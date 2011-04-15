@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110414232052) do
+ActiveRecord::Schema.define(:version => 20110415215423) do
 
   create_table "apps", :force => true do |t|
     t.string   "name"
@@ -31,6 +31,18 @@ ActiveRecord::Schema.define(:version => 20110414232052) do
     t.integer  "book_id"
     t.text     "content"
     t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "comments", :force => true do |t|
+    t.text     "text"
+    t.string   "commendable_type"
+    t.integer  "commendable_id"
+    t.string   "email"
+    t.string   "name"
+    t.string   "url"
+    t.boolean  "public"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
