@@ -1,3 +1,6 @@
 [submodule "vendor/gems/acts_as_list"]
 	path = vendor/gems/acts_as_list
 	url = git://github.com/swanandp/acts_as_list.git
+[submodule "vendor/gems/RedCloth"]
+	path = vendor/gems/RedCloth
+	url = git://github.com/jgarber/redcloth.git
