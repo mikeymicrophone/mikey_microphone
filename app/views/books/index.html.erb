@@ -1,12 +1,13 @@
-<h1>Mikey's books</h1>
+<div id="book_background">
+	<h1>Mikey's books</h1>
 
-<table>
-<% @books.each do |book| %>
-  <tr>
-    <td><%= link_to_name book %></td>
-		<td><%= pluralize book.chapters.count, 'chapter' %>
-  </tr>
-<% end %>
-</table>
+	<table>
+	<% @books.each do |book| %>
+	  <tr>
+	    <td><%= link_to_name book %></td>
+			<td><%= pluralize book.chapters.count, 'chapter' %>
+	  </tr>
+	<% end %>
+	</table>
 
-<br />
+</div>

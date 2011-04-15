@@ -4,6 +4,10 @@ class BooksController < ApplicationController
   # GET /books.xml
   def index
     @books = Book.all
+    
+    if @books.length == 1
+      redirect_to @books.first and return
+    end
 
     respond_to do |format|
       format.html # index.html.erb

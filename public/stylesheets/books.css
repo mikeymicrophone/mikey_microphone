@@ -1,3 +1,21 @@
+#book_background {
+	background-image: url(/images/clipboard.jpg);
+}
+
 .content_chapter p {
 	padding: 8px;
+	opacity: 1;
+	filter:alpha(opacity=100);
+	background: transparent;
+}
+.chapter {
+	border: 1px black solid;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	padding: 11px;
+	padding-top: 1px;
+	margin: 8px;
+	background-color: white;
+	opacity: 0.7;
+	filter:alpha(opacity=80);
 }
