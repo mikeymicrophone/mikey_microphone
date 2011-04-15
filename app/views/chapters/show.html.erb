@@ -22,7 +22,7 @@
 		<%= link_to "#{@chapter.lower_item.name} >>", @chapter.lower_item, :class => 'next_chapter' if @chapter.lower_item %>
 	<% end %>
 	<%= form_for @chapter.comments.new do |f| %>
-	  <%= content_tag_for(:h2, @chapter, :comment) { "Please share your comments." } %>
+	  <%= content_tag_for(:h2, @chapter, :comment_on) { "Please share your comments." } %>
 	  <%= f.text_area :text, :size => '45x3' %><br>
 	  <%= f.text_field :name %><%= f.label :name, 'name' %><br>
 	  <%= f.text_field :email %><%= f.label :email, 'email (will not be published)'%><br>

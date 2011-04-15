@@ -4,6 +4,9 @@
 	<%= content_tag_for :h1, @book, :title do %>
 		<%= @book.name %>
 	<% end %>
+	<%= content_tag_for :h3, @book, :comment_on do %>
+	  <%= link_to_function 'comment', "$('comment_text').focus()" %>
+	<% end %>
 
 	<% @book.chapters.each do |chapter| %>
 	  <% div_for chapter do %>
@@ -11,10 +14,14 @@
 		  <% div_for chapter, :content do %>
 		    <%= raw RedCloth.new(chapter.content).to_html %>
 		  <% end %>
+		  <%= div_for chapter, :comment_on do %>
+			  <%= link_to 'comment', chapter_path(chapter) + '#new_comment' %>
+			<% end %>
 		<% end %>
 	<% end %>
+	
 	<%= form_for @book.comments.new do |f| %>
-	  <%= content_tag_for(:h2, @book, :comment) { "Please share your comments." } %>
+	  <%= content_tag_for(:h2, @book, :comment_on) { "Please share your comments." } %>
 	  <%= f.text_area :text, :size => '45x3' %><br>
 	  <%= f.text_field :name %><%= f.label :name, 'name' %><br>
 	  <%= f.text_field :email %><%= f.label :email, 'email (will not be published)'%><br>

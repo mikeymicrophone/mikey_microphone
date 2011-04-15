@@ -2,12 +2,12 @@
 	background-image: url(/images/clipboard.jpg);
 }
 
-.title_book, .title_chapter {
+.title_book, .title_chapter, .comment_on_book, .comment_on_chapter {
 	text-align: center;
 	text-shadow: #D5D5D5 4px 4px 2px;
 }
 
-.title_book a {
+.title_book a, .comment_on_book a, .comment_on_chapter a {
 	text-decoration: none;
 }
 
@@ -55,4 +55,8 @@
 	background-color: white;
 	opacity: 0.7;
 	filter:alpha(opacity=80);
+}
+
+.comment_on_book {
+	text-align: center;
 }
