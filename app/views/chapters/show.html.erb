@@ -1,16 +1,24 @@
-<p id="notice"><%= notice %></p>
-<h2>
-  <%= link_to @chapter.book.name, @chapter.book %>
-</h2>
+<div id="book_background">
+	<%= render :partial => 'shared/header' %>
+	<p id="notice"><%= notice %></p>
+	<%= content_tag_for :h2, @chapter.book, :title do %>
+	  <%= link_to @chapter.book.name, @chapter.book %>
+	<% end %>
 
-<h3>
-  <%= @chapter.name %>
-</h3>
+	<%= content_tag_for :h3, @chapter, :title do %>
+	  <%= @chapter.name %>
+	<% end %>
 
-<%= link_to "<< #{@chapter.higher_item.name}", @chapter.higher_item if @chapter.higher_item %>
-<%= link_to "#{@chapter.lower_item.name} >>", @chapter.lower_item if @chapter.lower_item %>
-
-<%= raw RedCloth.new(@chapter.content).to_html %>
-
-<%= link_to "<< #{@chapter.higher_item.name}", @chapter.higher_item if @chapter.higher_item %>
-<%= link_to "#{@chapter.lower_item.name} >>", @chapter.lower_item if @chapter.lower_item %>
+  <%= div_for @chapter, :navigation, :class => 'clearfix' do %>
+		<%= link_to "<< #{@chapter.higher_item.name}", @chapter.higher_item, :class => 'previous_chapter' if @chapter.higher_item %>
+		<%= link_to "#{@chapter.lower_item.name} >>", @chapter.lower_item, :class => 'next_chapter' if @chapter.lower_item %>
+	<% end %>
+	
+	<%= div_for @chapter, :focus do %>
+		<%= raw RedCloth.new(@chapter.content).to_html %>
+	<% end %>
+  <%= div_for @chapter, :navigation, :class => 'clearfix' do %>
+		<%= link_to "<< #{@chapter.higher_item.name}", @chapter.higher_item, :class => 'previous_chapter' if @chapter.higher_item %>
+		<%= link_to "#{@chapter.lower_item.name} >>", @chapter.lower_item, :class => 'next_chapter' if @chapter.lower_item %>
+	<% end %>
+</div>

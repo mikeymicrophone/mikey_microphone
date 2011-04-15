@@ -2,18 +2,55 @@
 	background-image: url(/images/clipboard.jpg);
 }
 
+.title_book, .title_chapter {
+	text-align: center;
+	text-shadow: #D5D5D5 4px 4px 2px;
+}
+
+.title_book a {
+	text-decoration: none;
+}
+
+.navigation_chapter {
+	height: 31px;
+}
+
+.navigation_chapter a {
+	border: 1px black solid;
+	font-size: 1.3em;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	padding: 5px;
+	background-color: white;
+	opacity: 0.7;
+	filter:alpha(opacity=80);
+	text-decoration: none;
+}
+
+.previous_chapter {
+	position: absolute;
+	left: 25px;
+}
+
+.next_chapter {
+	position: absolute;
+	right: 25px;
+}
+
 .content_chapter p {
-	padding: 8px;
+	padding: 13px;
 	opacity: 1;
 	filter:alpha(opacity=100);
 	background: transparent;
 }
-.chapter {
+
+.chapter, .focus_chapter p {
 	border: 1px black solid;
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 	padding: 11px;
 	padding-top: 1px;
+	padding-bottom: 3px;
 	margin: 8px;
 	background-color: white;
 	opacity: 0.7;

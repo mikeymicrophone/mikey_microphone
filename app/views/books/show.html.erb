@@ -1,6 +1,9 @@
 <div id="book_background">
+	<%= render :partial => 'shared/header' %>
 	<p id="notice"><%= notice %></p>
-	<h1><%= @book.name %></h1>
+	<%= content_tag_for :h1, @book, :title do %>
+		<%= @book.name %>
+	<% end %>
 
 	<% @book.chapters.each do |chapter| %>
 	  <% div_for chapter do %>

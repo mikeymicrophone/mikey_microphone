@@ -3,6 +3,10 @@
 	background-opacity: 10%;
 }
 
+#logo :hover {
+	background-color: white;
+}
+
 #top_links a {
 	color: white;
 	text-decoration: none;

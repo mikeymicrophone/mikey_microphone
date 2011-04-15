@@ -19,4 +19,8 @@ module ApplicationHelper
 
     </script>!
   end
+  
+  def cleardiv
+    content_tag :div, nil, :class => 'clearfix'
+  end
 end
