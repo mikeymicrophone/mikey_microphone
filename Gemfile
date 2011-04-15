@@ -7,7 +7,7 @@ gem 'rails', '3.0.3'
 
 gem 'sqlite3'
 gem 'RedCloth'
-gem 'acts-as-list'
+gem 'acts_as_list'
 
 group :test, :development do
   gem "rspec-rails", "~> 2.4"

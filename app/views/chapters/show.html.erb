@@ -7,7 +7,7 @@
   <%= @chapter.name %>
 </h3>
 
-<%= raw textilize(@chapter.content) %>
+<%= raw RedCloth.new(@chapter.content).to_html %>
 
 
 <%= link_to 'Edit', edit_chapter_path(@chapter) %> |

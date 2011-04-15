@@ -5,7 +5,7 @@
   <% div_for chapter do %>
 	  <h2><%= link_to chapter.name, chapter %></h2>
 	  <% div_for chapter, :content do %>
-	    <%= raw textilize(chapter.content) %>
+	    <%= raw RedCloth.new(chapter.content).to_html %>
 	  <% end %>
 	<% end %>
 <% end %>
