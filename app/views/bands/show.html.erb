@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= @band.name %>
+</p>
+
+<p>
+
+  <%= @band.description %>
+</p>
+
+<%= div_for @band, :songs do %>
+  <% @band.songs.each do |song| %>
+    <%= div_for song do %>
+      <%= link_to_name song%>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= div_for @band, :details do %>
+  <% @band.details.each do |detail| %>
+    <%= div_for detail do %>
+      <%= markdown detail.description %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= div_for @band, :comments do %>
+  <% @band.comments.each do |comment| %>
+    <%= div_for comment do %>
+      <%= markdown comment.text %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%#= div_of_divs_for @band, :comments, :text %><%# do |comment| %>
+	<%#= comment.text %>
+<%# end %>

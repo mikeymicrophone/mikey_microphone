@@ -1,0 +1,6 @@
+<h1>bands I like</h1>
+
+<% @bands.each do |band| %>
+<%= div_for(band, :name) { band.name } %>
+<%= markdown band.description %>
+<% end %>

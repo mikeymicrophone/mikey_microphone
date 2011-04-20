@@ -15,7 +15,7 @@
 	<% end %>
 	
 	<%= div_for @chapter, :focus do %>
-		<%= raw RedCloth.new(@chapter.content).to_html %>
+		<%= markdown @chapter.content %>
 	<% end %>
   <%= div_for @chapter, :navigation_bottom, :class => 'clearfix' do %>
 		<%= link_to "<< #{@chapter.higher_item.name}", @chapter.higher_item, :class => 'previous_chapter' if @chapter.higher_item %>

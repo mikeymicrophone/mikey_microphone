@@ -1,4 +1,10 @@
 MikeyMicrophone::Application.routes.draw do
+  resources :covers
+
+  resources :songs
+
+  resources :bands
+
   resources :comments
 
   resources :chapters
