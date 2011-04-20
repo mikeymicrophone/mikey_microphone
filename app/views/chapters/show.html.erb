@@ -3,7 +3,7 @@
 	<p id="notice"><%= notice %></p>
 	<%= content_tag_for :h2, @chapter.book, :title do %>
 	  <%= link_to @chapter.book.name, @chapter.book %>
-	<% end %>
+	<% end if @chapter.book %>
 
 	<%= content_tag_for :h3, @chapter, :title do %>
 	  <%= @chapter.name %>
