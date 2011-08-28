@@ -4,12 +4,12 @@ describe "details/index.html.erb" do
   before(:each) do
     assign(:details, [
       stub_model(Detail,
-        :described_type => "Described Type",
+        :described_type => "App",
         :described_id => 1,
         :description => "MyText"
       ),
       stub_model(Detail,
-        :described_type => "Described Type",
+        :described_type => "Band",
         :described_id => 1,
         :description => "MyText"
       )
@@ -19,9 +19,7 @@ describe "details/index.html.erb" do
   it "renders a list of details" do
     render
     # Run the generator again with the --webrat flag if you want to use webrat matchers
-    assert_select "tr>td", :text => "Described Type".to_s, :count => 2
-    # Run the generator again with the --webrat flag if you want to use webrat matchers
-    assert_select "tr>td", :text => 1.to_s, :count => 2
+    assert_select "a", :text => "Band", :count => 1
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "tr>td", :text => "MyText".to_s, :count => 2
   end

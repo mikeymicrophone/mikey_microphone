@@ -13,8 +13,8 @@ describe "covers/edit.html.erb" do
 
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "form", :action => covers_path(@cover), :method => "post" do
-      assert_select "input#cover_band", :name => "cover[band]"
-      assert_select "input#cover_song", :name => "cover[song]"
+      assert_select "select#cover_band_id", :name => "cover[band]"
+      assert_select "select#cover_song_id", :name => "cover[song]"
     end
   end
 end
