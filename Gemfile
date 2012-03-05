@@ -1,13 +1,14 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.3'
+gem 'rails', '3.2.2'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-#gem 'sqlite3'
+gem 'mysql2' #gem 'sqlite3'
 gem 'RedCloth'
 gem 'acts_as_list'
+gem 'devise'
 
 #group :test, :development do
 #  gem "rspec-rails", "~> 2.4"

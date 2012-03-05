@@ -1,4 +1,8 @@
 MikeyMicrophone::Application.routes.draw do
+  devise_for :microphones
+
+  devise_for :mikeys
+
   resources :covers
 
   resources :songs
