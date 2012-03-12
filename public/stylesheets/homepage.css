@@ -15,6 +15,22 @@
 	padding: 3px;
 }
 
+#micharisma {
+	margin: 40px;
+	padding: 9px;
+	border-radius: 10px;
+	background-color: white;
+	opacity: 0.8;
+}
+
+#micharisma h1 {
+	text-align: center;
+}
+
+#micharisma p {
+	font-size: 19px;
+}
+
 h2 {
 	color: #1D713A;
 }
