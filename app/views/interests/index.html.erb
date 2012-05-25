@@ -1,0 +1,29 @@
+<article>
+  <p>
+    Writing iPhone apps is one of the most relevant ways to reach people.  The platform has many unique ways to interact with people and other technologies.  It has a sophisticated and growing set of tools that help you write apps - and now, a former Apple engineer has brought a new one that has long been a dream of many: Ruby.
+  </p>
+  <p>
+    Ruby is an expressive language, noted for its brevity and readability.  These traits are buried deep within the features that make Ruby special.  You do not need to understand them to use Ruby.  Ruby is a great tool for iOS development because it makes your code brief and readable.
+  </p>
+
+  <p>
+    In fact, there are iPhone apps written in Ruby that need as little as 100 lines of code.
+  </p>
+  <p>
+    If you choose to learn this language, the main task ahead of you will be learning what APIs are already available to apps.  Things like "camera.capturePhoto" or "microphone.startRecording" or "GPS.get_location".  Aside from that, you need to learn how to use the tools to make the different screens in your app, and a few other things.
+  </p>
+  <p>
+It's a big, complicated system, but you can learn a few things at a time and really make apps!
+  </p>
+I am excellently qualified to teach you about using these languages and tools.  I was a very early adopter of both Ruby and iOS.  I know many details about each one, and I also understand them better since I've seen them change over the years.  I know about the things that used to be problems and how to avoid them all.  I also know what it's like to figure these things out on your own, and what the confusing things were when I learned.  So, I can teach a very simple, focused, deep lesson no matter what your skill or experience may be.
+
+<% Interest.all.each do |interest| %>
+  <%= div_for interest do %>
+    <%= link_to interest.name, interest, :class => 'interest_name' %>
+    <%= div_for interest, :details_on do %>
+      <% interest.details.each do |detail| %>
+        <li><%= detail.description %></li>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

@@ -9,9 +9,9 @@
 	<% end %>
 
 	<% @book.chapters.each do |chapter| %>
-	  <% div_for chapter do %>
+	  <%= div_for chapter do %>
 		  <h2><%= link_to chapter.name, chapter %></h2>
-		  <% div_for chapter, :content do %>
+		  <%= div_for chapter, :content do %>
 		    <%= markdown chapter.content %>
 		  <% end %>
 		  <%= content_tag_for :h3, chapter, :comment_on do %>

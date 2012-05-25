@@ -1,0 +1,10 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+.interest_name {
+	font-family: Trebuchet;
+	font-size: 20px;
+	padding: 7px;
+	margin-left: 80px;
+}

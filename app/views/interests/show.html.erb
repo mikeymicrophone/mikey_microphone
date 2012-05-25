@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @interest.name %>
+</p>
+<%= div_for @interest, :details_on do %>
+  <% @interest.details.each do |detail| %>
+    <li><%= detail.description %></li>
+  <% end %>
+<% end %>
+
+
+<%= link_to 'Edit', edit_interest_path(@interest) %> |
+<%= link_to 'Back', interests_path %>
+<%= link_to 'add detail', new_detail_path(:detail => {:described_type => 'Interest', :described_id => @interest.id}) %>
+<%= link_to 'new link', new_link_path(:link => {:linked_type => 'Interest', :linked_id => @interest.id}) %>
