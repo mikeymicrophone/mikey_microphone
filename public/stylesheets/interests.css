@@ -8,3 +8,38 @@
 	padding: 7px;
 	margin-left: 80px;
 }
+
+body {
+	font-family: Helvetica Neue;
+}
+
+#logo {
+	display: inline-block;
+}
+
+#motto_box {
+	display: inline-block;
+	padding-bottom: 30px;
+}
+
+#motto {
+	font-size: 36px;
+	font-weight: bold;
+}
+
+#query {
+	font-size: 30px;
+}
+
+#link_bank ul {
+	list-style-type: none;
+	
+}
+
+#link_bank ul li a {
+	font-size: 30px;
+}
+
+.detail {
+	text-align: right;
+}

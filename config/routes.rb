@@ -34,7 +34,7 @@ MikeyMicrophone::Application.routes.draw do
 
   resources :lists
   
-  root :to => 'listings#homepage'
+  root :to => 'interests#homepage'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
