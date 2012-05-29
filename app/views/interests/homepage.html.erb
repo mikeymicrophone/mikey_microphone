@@ -1,3 +1,6 @@
+<div id="headband">
+  <%= mail_to 'mikey@mikeymicrophone.com', 'Contact Mikey', :id => 'contact-button' %>
+</div>
 <div id="top">
   <%= image_tag 'mike-icon.png', :id => 'logo' %>
   <div id="motto_box">
@@ -12,7 +15,7 @@
       <a id="development">Development</a>
       <div class="detail">
         I've spent most of my career focusing on just two technologies: Ruby and iOS.  I picked my poison and stuck with it.<br>
-        I also learned my way around all the other tools needed for those projects.
+        I am very excited that RubyMotion now enables us to write iOS apps in Ruby.
       </div>
     </li>
     <li>
@@ -32,7 +35,16 @@
     <li>
       <a id="music">Music</a>
       <div class="detail">
-        I'm not performing at the moment, but I enjoy sharing my tastes and observations about the best music out there.
+        I'm not performing at the moment, but I enjoy sharing my tastes and observations about the best music out there, how it's made and what it means.
       </div>
     </li>
+  </ul>
+</div>
+<div id="social_graces">
+  <%= link_to image_tag('facebook-icon.png') %>
+  <%= link_to image_tag('twitter-icon.png') %>
+  <%= link_to image_tag('github-icon.png') %>
+  <%= link_to image_tag('soundcloud-icon.png') %>
+  <%= link_to image_tag('spotify-icon.png') %>
+  <%= link_to image_tag('lastfm-icon.png') %>
 </div>

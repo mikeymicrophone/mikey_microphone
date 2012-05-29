@@ -11,24 +11,57 @@
 
 body {
 	font-family: Helvetica Neue;
+	background-color: #E6E6E6;
+	margin: 0px;
+}
+
+#headband {
+	background-color: #4D4D4D;
+	height: 30px;
+	padding: 7px;
+}
+
+#contact-button {
+	float: right;
+	margin-right: 12px;
+	padding-right: 24px;
+	padding-left: 24px;
+	background-color: #FF505D;
+	color: white;
+	margin-top: 2px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+#top {
+	width: 1024px;
+	height: 200px;
 }
 
 #logo {
 	display: inline-block;
+	float: left;
+	margin-right: 30px;
+	margin-left: 30px;
 }
 
 #motto_box {
 	display: inline-block;
 	padding-bottom: 30px;
+	margin: 50px 0px 0px 0px;
 }
 
 #motto {
 	font-size: 36px;
 	font-weight: bold;
+	margin: 0px;
 }
 
 #query {
 	font-size: 30px;
+	margin: 0px;
 }
 
 #link_bank ul {
@@ -41,5 +74,20 @@ body {
 }
 
 .detail {
-	text-align: right;
+/*	text-align: right;*/
+	padding-bottom: 15px;
+}
+
+#social_graces {
+	margin-left: 30px;
+}
+
+#social_graces a {
+	width: 80px;
+	height: 80px;
+	display: inline-block;
+}
+
+#social_graces a:hover {
+	background-image: url(../images/burst-bg.png);
 }
