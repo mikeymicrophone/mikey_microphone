@@ -1,4 +1,5 @@
 class DetailsController < ApplicationController
+  before_filter :authenticate_mikey!
   # GET /details
   # GET /details.xml
   def index
