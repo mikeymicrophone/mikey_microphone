@@ -1,5 +1,5 @@
 class InterestsController < ApplicationController
-  before_filter :authenticate_mikey!, :except => [:index, :show]
+  before_filter :authenticate_mikey!, :except => [:homepage, :index, :show]
   # GET /interests
   # GET /interests.json
   def index
